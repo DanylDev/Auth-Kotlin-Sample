@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Drink App</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip">Skip</string>
+    <string name="skip_title">Skip the queue</string>
+    <string name="skip_description"><![CDATA[Order & pay comfortable directly from your phone]]></string>
+    <string name="new_user">New user</string>
+    <string name="sign_in">Sign In</string>
+    <string name="register">Register</string>
+    <string name="back">Back</string>
+    <string name="continue_with_facebook">Continue with FaceBook</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="or">or</string>
+    <string name="register_with_email">Register with Email</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="email">Email Address</string>
+    <string name="login">Login</string>
+    <string name="login_with_email">Login with Email</string>
+    <string name="forgot_password">Forgot password?</string>
+</resources>

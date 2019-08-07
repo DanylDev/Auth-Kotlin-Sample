@@ -1,0 +1,97 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "infinite.drinkapp.app"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [toothpick_registry_package_name: 'infinite.drinkapp.app']
+            }
+        }
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+
+        manifestPlaceholders = [auth0Domain: "@string/com_auth0_domain", auth0Scheme: "https"]
+    }
+
+    buildTypes {
+        all {
+            resValue "string", "account_type", defaultConfig.applicationId + ".main"
+
+            buildConfigField "String", "BASE_SERVER_URL", '"http://dev-manage.drinkapp.net/"'
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(":core")
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    // region Support
+    implementation support(":appcompat-v7")
+    implementation support(":recyclerview-v7")
+    implementation support(".constraint:constraint-layout", "1.1.3")
+    implementation support(":support-v4")
+    implementation support(":design")
+    implementation support(":cardview-v7")
+    implementation support(":support-vector-drawable")
+    // endregion
+
+    // region Kotlin Coroutines
+    implementation kotlinx("kotlinx-coroutines-core")
+    implementation kotlinx("kotlinx-coroutines-android")
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2"
+    // endregion
+
+    // region DI - Toothpick
+    implementation toothpick("toothpick-runtime")
+    implementation toothpick("smoothie")
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:28.0.0'
+    kapt toothpick("toothpick-compiler")
+    testImplementation toothpick("toothpick-testing")
+    // endregion
+
+    // region Network
+    implementation okhttp3("okhttp")
+    implementation okhttp3("logging-interceptor")
+    implementation retrofit2("converter-gson")
+    implementation(retrofit2("retrofit")) {
+        exclude module: 'okhttp'
+    }
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    // endregion
+
+    // region Tests
+    testImplementation junit
+
+    androidTestImplementation support(".test:runner", "1.0.2")
+    androidTestImplementation support(".test.espresso:espresso-core", "3.0.2")
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    // endregion
+}
+
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+}

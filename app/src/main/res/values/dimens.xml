@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- region Spacing dimens-->
+    <dimen name="no_spacing">0dp</dimen>
+    <dimen name="spacing">1dp</dimen>
+    <dimen name="spacing_0">4dp</dimen>
+    <dimen name="spacing_1">8dp</dimen>
+    <dimen name="spacing_2">16dp</dimen>
+    <dimen name="spacing_3">24dp</dimen>
+    <dimen name="spacing_4">32dp</dimen>
+    <dimen name="spacing_5">20dp</dimen>
+    <dimen name="spacing_6">30dp</dimen>
+    <dimen name="spacing_7">40dp</dimen>
+    <dimen name="spacing_8">60dp</dimen>
+    <dimen name="spacing_9">80dp</dimen>
+    <dimen name="spacing_10">150dp</dimen>
+    <dimen name="spacing_top_logo">60dp</dimen>
+    <dimen name="logo_auth_size">200dp</dimen>
+    <dimen name="spacing_fb">13dp</dimen>
+    <!-- endregion -->
+
+    <!-- region Radius dimens-->
+    <dimen name="radius_1">2dp</dimen>
+    <dimen name="radius_2">4dp</dimen>
+    <dimen name="radius_3">8dp</dimen>
+    <dimen name="radius_corners">10dp</dimen>
+    <!-- endregion -->
+
+    <!-- region TextSize dimens-->
+    <dimen name="text.size.small">12sp</dimen>
+    <dimen name="text.size.normal">14sp</dimen>
+    <dimen name="text.size.medium">16sp</dimen>
+    <dimen name="text.size.large">18sp</dimen>
+    <dimen name="text.size.x_large">22sp</dimen>
+    <dimen name="text.size.xx_large">24sp</dimen>
+    <dimen name="text.size.xxl_large">36sp</dimen>
+    <dimen name="text.size.xxx_large">48sp</dimen>
+
+    <!-- endregion -->
+
+    <!-- region Stroke dimens-->
+    <dimen name="border_stroke">2dp</dimen>
+    <!-- endregion -->
+
+    <!-- region Decorator dimens-->
+    <dimen name="no_margin">0dp</dimen>
+    <dimen name="margin_replies">10dp</dimen>
+    <dimen name="margin_vertical">10dp</dimen>
+    <dimen name="start_margin_vertical">50dp</dimen>
+    <dimen name="ai_logo_size">30dp</dimen>
+    <dimen name="message_alert">20dp</dimen>
+    <dimen name="margin_cells">4dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="field_padding">12dp</dimen>
+    <!-- endregion -->
+
+</resources>
